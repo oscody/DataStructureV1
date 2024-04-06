@@ -5,7 +5,8 @@ namespace DataStructureV1
 	{
 		public RunningSumOf1DArray()
 		{
-		}
+
+        }
 
 		public int[] RunningSumOf1DArrayV1(int[] input) {
 

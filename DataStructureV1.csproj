@@ -7,4 +7,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="DataStructures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataStructures\" />
+  </ItemGroup>
 </Project>
