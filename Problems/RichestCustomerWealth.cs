@@ -5,6 +5,32 @@ namespace DataStructureV1.Problems
     {
         public RichestCustomerWealth()
         {
+            Console.WriteLine("1672. Richest Customer Wealth");
+
+            RichestCustomerWealth richestCustomer = new RichestCustomerWealth();
+
+
+            var accounts = new[,] { { 1, 2, 3 }, { 3, 2, 1 } };
+
+            var maximumWealth = richestCustomer.RichestCustomerWealthV1(accounts);
+
+            Console.WriteLine(maximumWealth);
+
+            Console.WriteLine("1672. Richest Customer Wealth V2");
+
+            var accountsV2 = new int[][] {
+                new int[] { 5, 2, 3 },
+                new int[] { 3, 2, 1 },
+                new int[] { 3, 5, 5 },
+
+            };
+
+            var maximumWealthV2 = RichestCustomerWealthV2(accountsV2);
+
+            Console.WriteLine(maximumWealthV2);
+
+            var maximumWealthV3 = RichestCustomerWealthV2(accountsV2);
+            Console.WriteLine(maximumWealthV3);
         }
 
 
