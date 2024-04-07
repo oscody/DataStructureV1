@@ -1,8 +1,12 @@
 ﻿using System;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+
 namespace DataStructureV1
 {
 	public class Array
 	{
+
+        //reference type  
         public string description = "Ordered list of values, typically stored in contigeous blocks of memory";
 
 		public Array()
@@ -26,9 +30,48 @@ namespace DataStructureV1
 
 
 
+        public void MultiArray()
+        {
+            int[,] num = new int[2, 3] { { 2, 3, 6 }, { 3, 7, 9 } };
+
+
+            int[,] num2 = { { 2, 3, 6 }, { 3, 7, 9 } };
+
+
+            for (int j = 0; j < num2.GetLength(0); j++)
+            {
+
+
+                for (int i = 0; i < num2.GetLength(1); i++)
+                {
+
+                }
+            }
+
+        
+        }
 
 
 
-	}
+        public void JaggedArray()
+        {
+            int[][] num = new int[2][];
+            num[0] = new int[1];
+            num[1] = new int[2];
+
+
+            for (int j = 0; j < num.Length; j++)
+            {
+
+
+                for (int i = 0; i < num[i].Length; i++)
+                {
+
+                }
+            }
+
+
+        }
+    }
 }
 
