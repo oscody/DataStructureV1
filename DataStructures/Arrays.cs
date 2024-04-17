@@ -3,13 +3,13 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace DataStructureV1
 {
-	public class Array
+	public class Arrays
 	{
 
         //reference type  
         public string description = "Ordered list of values, typically stored in contigeous blocks of memory";
 
-		public Array()
+		public Arrays()
 		{
 
             //https://www.w3schools.com/cs/cs_arrays.php
