@@ -18,6 +18,7 @@ namespace DataStructureV1.Problems
             // and keep track of max product 
             for (int i = 0; i < n; i++)
                 for (int j = i + 1; j < n; j++)
+
                     if (arr[i] * arr[j] > a * b)
                     {
                         a = arr[i];
@@ -29,6 +30,37 @@ namespace DataStructureV1.Problems
 
 
         }
-	}
+
+
+        public static int MaximumProduct(int[] nums)
+        {
+            // 628. Maximum Product of Three Numbers
+            // https://leetcode.com/problems/maximum-product-of-three-numbers/
+
+
+            Array.Sort(nums);
+            var n = nums.Length;
+
+
+
+            int a = nums[n - 1] * nums[n - 2] * nums[n - 3];
+            int b = nums[0] * nums[1] * nums[2];
+
+            if (a > b)
+            {
+
+                //Console.Write(a);
+                return a;
+
+            }
+            else
+            {
+
+                //Console.Write(b);
+                return b;
+            }
+
+        }
+    }
 }
 
