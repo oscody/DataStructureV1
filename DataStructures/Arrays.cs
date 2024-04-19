@@ -9,8 +9,8 @@ namespace DataStructureV1
         //reference type  
         public string description = "Ordered list of values, typically stored in contigeous blocks of memory";
 
-		public Arrays()
-		{
+        public Arrays()
+        {
 
             //https://www.w3schools.com/cs/cs_arrays.php
 
@@ -26,9 +26,10 @@ namespace DataStructureV1
 
             // Create an array of four elements, omitting the new keyword, and without specifying the size
             string[] cars3 = { "Volvo", "BMW", "Ford", "Mazda" };
+
+            //int[] squaredArray = new int[nums.Length];
+            //Array.Sort(squaredArray);
         }
-
-
 
         public void MultiArray()
         {
@@ -51,8 +52,6 @@ namespace DataStructureV1
         
         }
 
-
-
         public void JaggedArray()
         {
             int[][] num = new int[2][];
@@ -72,6 +71,9 @@ namespace DataStructureV1
 
 
         }
+
+
+        
     }
 }
 

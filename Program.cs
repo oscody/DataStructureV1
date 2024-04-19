@@ -1,11 +1,15 @@
 ﻿
 // See https://aka.ms/new-console-template for more information
+using DataStructureV1;
 using DataStructureV1.Problems;
+using static System.Net.Mime.MediaTypeNames;
 
 Console.WriteLine("Hello, World!");
 
 var linebreak = "--------------------";
 
+
+ArraysIntro.TestCode();
 
 ///var answer = new FizzBuzz(15);
 
@@ -13,7 +17,7 @@ var linebreak = "--------------------";
 Console.WriteLine(linebreak);
 
 
-Middle_of_The_Linked_List.Test();
+//Middle_of_The_Linked_List.Test();
 
 
 Console.WriteLine(linebreak);
@@ -28,3 +32,8 @@ Console.WriteLine(linebreak);
 
 Console.WriteLine(linebreak);
 
+Helper.Test();
+
+Ransom_Note.Test();
+
+Console.WriteLine(linebreak);
