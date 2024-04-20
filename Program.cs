@@ -1,8 +1,7 @@
 ﻿
 // See https://aka.ms/new-console-template for more information
-using DataStructureV1;
 using DataStructureV1.Problems;
-using static System.Net.Mime.MediaTypeNames;
+using DataStructureV1.Problems.WorkingWithArrays;
 
 Console.WriteLine("Hello, World!");
 
@@ -10,6 +9,7 @@ var linebreak = "--------------------";
 
 
 ArraysIntro.TestCode();
+ArraysInsert.TestCode();
 
 ///var answer = new FizzBuzz(15);
 

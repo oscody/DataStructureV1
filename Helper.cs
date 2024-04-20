@@ -15,6 +15,12 @@ namespace DataStructureV1.Problems
 
 
         }
+
+        public static void ArrayToString(int[] a) {
+
+            string output = string.Join(" ", a);
+            Console.WriteLine($"ArrayToString-{output}");
+        }
 	}
 }
 

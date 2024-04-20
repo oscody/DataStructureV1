@@ -16,7 +16,6 @@ namespace DataStructureV1.Problems
             int[] nonSorted = { -4, -1, 0, 3, 10 };
             //Console.WriteLine($"SortedSquares-{SortedSquares(nonSorted)}");
 
-
         }
 
         public static int[] SortedSquares(int[] nums)

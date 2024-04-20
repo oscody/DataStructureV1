@@ -10,9 +10,11 @@
   <ItemGroup>
     <None Remove="DataStructures\" />
     <None Remove="Problems\" />
+    <None Remove="Problems\WorkingWithArrays\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DataStructures\" />
     <Folder Include="Problems\" />
+    <Folder Include="Problems\WorkingWithArrays\" />
   </ItemGroup>
 </Project>
