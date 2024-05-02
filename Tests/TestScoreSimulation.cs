@@ -5,7 +5,52 @@ namespace DataStructureV1.Tests
 {
 	public static class TestScoreSimulation
 	{
-		public static void Soulution() {
+        private static void Description() {
+
+            /*
+                 * Problem Description:
+                 * Grade Adjustment Simulation
+                 *
+                 * This function simulates the adjustment of student grades based on their relative performance
+                 * compared to their immediate neighbors. The grades are represented in an array where each grade
+                 * belongs to a student seated in a row. The grade adjustment follows these rules:
+                 *
+                 * - If a student's grade is less than the grades of the students directly to their left and right,
+                 *   their grade should increase by 1.
+                 * - If a student's grade is greater than the grades of the students directly to their left and right,
+                 *   their grade should decrease by 1.
+                 *
+                 * The adjustment process repeats until no grades change in a full pass through the list, indicating
+                 * that equilibrium has been reached.
+                 *
+                 * Constraints:
+                 * - The first and last students in the row do not have two neighbors, thus their grades never change.
+                 * - Grades are positive integers.
+                 *
+                 * Input:
+                 * - An array of integers 'grades', where each integer represents the grade of a student seated in a row.
+                 *
+                 * Output:
+                 * - The adjusted array of grades after no further changes can be made.
+                 *
+                 * Example:
+                 * Input:  int[] grades = {3, 4, 2, 5, 3};
+                 * Output: Final Grades: 3, 4, 4, 4, 3
+                 *
+                 * Explanation:
+                 * - The student with grade 2 (third student) is sitting between students with grades 4 and 5.
+                 *   Since 2 is less than both 4 and 5, the grade of the third student increases to 3.
+                 * - The student with grade 5 (fourth student) is sitting between students with grades 2 and 3
+                 *   (before their adjustment). Since 5 is greater than both 2 and 3, the grade of the fourth student
+                 *   decreases to 4.
+                 * - Adjustments continue in subsequent iterations based on updated neighbor comparisons until no
+                 *   more changes are necessary.
+                 *
+                 * This simulation is useful for scenarios where local interactions influence overall system equilibria.
+                 */
+
+        }
+        public static void Soulution() {
 
             Console.WriteLine("Test Score Simulation");
 
@@ -34,12 +79,16 @@ namespace DataStructureV1.Tests
 
             while (changed)
             {
-                changed = false; 
-                int[] gradesCopy = (int[])grades.Clone(); // Clone grades to gradesCopy at the start of each iteration
+                changed = false;
+
+                // Clone grades to gradesCopy at the start of each iteration
+                int[] gradesCopy = (int[])grades.Clone(); 
 
                 for (int i = 1; i < grades.Length - 1; i++)
-                { // Start from 1 to avoid index out of bounds
+                {
+                    // Start from 1 to avoid index out of bounds
                     Console.WriteLine($"this is i-{i}");
+
                     if (grades[i] < grades[i - 1] && grades[i] < grades[i + 1])
                     {
                         gradesCopy[i] += 1;
