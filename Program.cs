@@ -2,14 +2,15 @@
 // See https://aka.ms/new-console-template for more information
 using DataStructureV1.Problems;
 using DataStructureV1.Problems.WorkingWithArrays;
+using DataStructureV1.Tests;
 
 Console.WriteLine("Hello, World!");
 
 var linebreak = "--------------------";
 
 
-ArraysIntro.TestCode();
-ArraysInsert.TestCode();
+//ArraysIntro.TestCode();
+//ArraysInsert.TestCode();
 
 ///var answer = new FizzBuzz(15);
 
@@ -32,8 +33,10 @@ Console.WriteLine(linebreak);
 
 Console.WriteLine(linebreak);
 
-Helper.Test();
+//Helper.Test();
 
-Ransom_Note.Test();
+//Ransom_Note.Test();
 
 Console.WriteLine(linebreak);
+
+TestScoreSimulation.Soulution();
