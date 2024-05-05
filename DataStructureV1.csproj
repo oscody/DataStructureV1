@@ -12,11 +12,13 @@
     <None Remove="Problems\" />
     <None Remove="Problems\WorkingWithArrays\" />
     <None Remove="Tests\" />
+    <None Remove="Problems\LeetCode\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DataStructures\" />
     <Folder Include="Problems\" />
     <Folder Include="Problems\WorkingWithArrays\" />
     <Folder Include="Tests\" />
+    <Folder Include="Problems\LeetCode\" />
   </ItemGroup>
 </Project>

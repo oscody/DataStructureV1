@@ -1,6 +1,7 @@
 ﻿
 // See https://aka.ms/new-console-template for more information
 using DataStructureV1.Problems;
+using DataStructureV1.Problems.LeetCode;
 using DataStructureV1.Problems.WorkingWithArrays;
 using DataStructureV1.Tests;
 
@@ -39,4 +40,10 @@ Console.WriteLine(linebreak);
 
 Console.WriteLine(linebreak);
 
-TestScoreSimulation.Soulution();
+//TestScoreSimulation.Soulution();
+//TestHexSpeak.Run();
+
+Console.WriteLine(linebreak);
+//TwoSum.Run();
+
+Palindrome.Run();
