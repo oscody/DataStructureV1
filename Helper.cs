@@ -21,6 +21,16 @@ namespace DataStructureV1.Problems
             string output = string.Join(" ", a);
             Console.WriteLine($"ArrayToString-{output}");
         }
+
+
+        public static void IntArrayToString(int [] intArray) {
+
+            for (int i = 0; i < intArray.Length; i++) {
+
+                Console.WriteLine("Index " + i + " contains " + intArray[i]);
+
+            }
+        }
 	}
 }
 

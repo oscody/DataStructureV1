@@ -12,7 +12,8 @@ var linebreak = "--------------------";
 
 //ArraysIntro.TestCode();
 //ArraysInsert.TestCode();
-
+//ArrayDelete.Test();
+ArraySearching.TestCode();  
 ///var answer = new FizzBuzz(15);
 
 
@@ -46,4 +47,4 @@ Console.WriteLine(linebreak);
 Console.WriteLine(linebreak);
 //TwoSum.Run();
 
-Palindrome.Run();
+//Palindrome.Run();
