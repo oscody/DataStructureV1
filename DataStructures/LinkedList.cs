@@ -5,96 +5,97 @@ using System.Threading.Tasks;
 
 namespace DataStructureV1.DataStructures
 {
-    
-    public class LinkedList
+
+    public class Node<T>
     {
+        public T Data { get; set; }
+        public Node<T> Next { get; set; }
 
-        private ListNode head;
-        private ListNode tail;
+        public Node(T data)
+        {
+            Data = data;
+            Next = null;
+        }
+    }
 
+    
+    public class LinkedList<T>
+    {
+        private Node<T> head;
 
-
-        public LinkedList(){
-
-            head = new ListNode(-1);
-            tail = head;
+        public LinkedList()
+        {
+            head = null;
         }
 
-
-        public int Get(int index){
-            ListNode curr = head.next;
-            int i = 0;
-
-            while (curr != null){
-
-                if(i ==index){
-                    return curr.val;
-
-                }
-                i++;
-                curr = curr.next;
-            }
-            return -1;
+        public void AddFirst(T data)
+        {
+            Node<T> newNode = new Node<T>(data);
+            newNode.Next = head;
+            head = newNode;
         }
 
-        public void InsertHead(int val){
-
-            ListNode newNode = new ListNode(val);
-
-            newNode.next = head.next;
-            head.next = newNode;
-            
-            if(newNode.next == null){
-
-                tail = newNode;
-
-            }
-        }
-
-        public void InserTail(int val){
-            tail.next = new ListNode(val);
-            tail = tail.next;
-        }
-
-
-        public bool Remove (int index){
-
-
-            int i = 0;
-            ListNode curr = head;
-            while(i < index && curr != null){
-
-                i++;
-                curr = curr.next;
-
+        public void AddLast(T data)
+        {
+            if (head == null)
+            {
+                head = new Node<T>(data);
+                return;
             }
 
+            Node<T> current = head;
+            while (current.Next != null)
+            {
+                current = current.Next;
+            }
 
-            // Remove the node ahead of the curr
-            if(curr != null && curr.next != null){
-                if(curr.next == tail){
-                    tail = curr;
-                }
+            current.Next = new Node<T>(data);
+        }
 
-                curr.next = curr.next.next;
+        public bool Remove(T data)
+        {
+            if (head == null) return false;
+
+            if (head.Data.Equals(data))
+            {
+                head = head.Next;
                 return true;
             }
 
-            return false;
-        }
-
-
-        public List<int> GetValues(){
-
-            List<int> res = new List<int>();
-            ListNode curr = head.next;
-            while(curr != null){
-                res.Add(curr.val);
-                curr = curr.next;
+            Node<T> current = head;
+            while (current.Next != null && !current.Next.Data.Equals(data))
+            {
+                current = current.Next;
             }
 
-            return res;
+            if (current.Next == null) return false;
+
+            current.Next = current.Next.Next;
+            return true;
         }
-        
+
+        public void PrintList()
+        {
+            Node<T> current = head;
+            while (current != null)
+            {
+                Console.Write(current.Data + " ");
+                current = current.Next;
+            }
+            Console.WriteLine();
+        }
+
+        public int Count()
+        {
+            int count = 0;
+            Node<T> current = head;
+            while (current != null)
+            {
+                count++;
+                current = current.Next;
+            }
+            return count;
+        }
     }
+
 }
