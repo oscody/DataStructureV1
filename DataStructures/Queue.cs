@@ -4,11 +4,13 @@
 namespace DataStructureV1
 {
 
-    public class TestQueue<T>{
+    public class Queue<T>{
 
+        // Queue is a FIFO data structure
+        
         private List<T> _queue = new List<T>();
 
-        public TestQueue(){
+        public Queue(){
 
 
         }
