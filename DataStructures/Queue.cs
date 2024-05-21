@@ -7,7 +7,7 @@ namespace DataStructureV1
     public class Queue<T>{
 
         // Queue is a FIFO data structure
-        
+
         private List<T> _queue = new List<T>();
 
         public Queue(){
@@ -32,6 +32,14 @@ namespace DataStructureV1
             return item;
         
         
+        }
+
+        public T Peek(){
+            if(_queue.Count == 0){
+                throw new InvalidOperationException("");
+            }
+
+            return _queue[0];
         }
 
     }
