@@ -34,13 +34,16 @@ namespace DataStructureV1.Problems
         public static void RunCode(){
 
             int [] inputArray = {1, 3, 4, 2, 2};
-            int duplicate = Solution1(inputArray);
-            
-            Console.WriteLine($"Answer: {duplicate}");
+            int duplicate = Solution1V1(inputArray);
+            // int duplicate = Solution2(inputArray);
+
+
+            Console.WriteLine($"FindDuplicate Answer: {duplicate}");
     
         }
         
-
+        // Time Complexity: O(n^2)
+        // Space Complexity: O(1)
         private static int Solution1(int[] nums) {
             
             for(int i = 0; i < nums.Length - 1 ; i++){
@@ -53,6 +56,40 @@ namespace DataStructureV1.Problems
                     }
                 }
                 
+            }
+            return -1;
+        }
+
+        private static int Solution1V1(int[] nums) {
+            
+            foreach(var i in nums){
+                
+                foreach(var j in nums){
+                    
+                    if (nums[i] == nums[j]){
+                        
+                        return nums[i];
+                    }
+                }
+                
+            }
+            return -1;
+        }
+
+        
+
+        // O(n) time complexity with 
+        // O(1) space complexity.
+        private static int Solution2(int[] nums){
+
+            HashSet<int> hashSet = new HashSet<int>();
+
+            for(int i = 0; i < nums.Length; i++){
+                
+                if (hashSet.Contains(nums[i])){
+                    return nums[i];
+                }
+                hashSet.Add(nums[i]);
             }
             return -1;
         }

@@ -50,3 +50,5 @@ Console.WriteLine(linebreak);
 //Palindrome.Run();
 
 FindDuplicate.RunCode();
+
+ValidAnagram.RunCode();
