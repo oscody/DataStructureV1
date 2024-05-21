@@ -4,69 +4,58 @@ using System.IO;
 
 namespace DataStructureV1.Problems
 {
-class Solution {
-    
-
-    //Mc Donals Interview Question
-    // Given an array of integers nums containing n + 1 integers 
-    // where each integer is in the range [1, n] inclusive:
-    // There is only one repeated number in nums; return this repeated number.
-    
-    // Example cases:
-    //  --
-    //  Input: 1 3 4 2 2
-    //  Output: 2
-    //  --
-    //  --
-    //  Input: 3 1 3 4 2
-    //  Output: 3
-    //  --
-    //  --
-    //  Input: 3 3 3 3 3
-    //  Output: 3
-    //  --
-    
-    
-    // loop through the array 
-    // i = 3 
-    // j = 1
-    
-
-    static int FindDuplicate(int[] nums) {
-        // fill this out :)
+    public static class FindDuplicate {
         
-        for(int i = 0; i <= nums.Length; i++){
+
+        //Mc Donals Interview Question
+        // Given an array of integers nums containing n + 1 integers 
+        // where each integer is in the range [1, n] inclusive:
+        // There is only one repeated number in nums; return this repeated number.
+        
+        // Example cases:
+        //  --
+        //  Input: 1 3 4 2 2
+        //  Output: 2
+        //  --
+        //  --
+        //  Input: 3 1 3 4 2
+        //  Output: 3
+        //  --
+        //  --
+        //  Input: 3 3 3 3 3
+        //  Output: 3
+        //  --
+        
+        
+        // loop through the array 
+        // i = 3 
+        // j = 1
+
+        public static void RunCode(){
+
+            int [] inputArray = {1, 3, 4, 2, 2};
+            int duplicate = Solution1(inputArray);
             
-            for(int j = 1; j <= nums.Length - 1; j++){
+            Console.WriteLine($"Answer: {duplicate}");
+    
+        }
+        
+
+        private static int Solution1(int[] nums) {
+            
+            for(int i = 0; i < nums.Length - 1 ; i++){
                 
-                if (nums[i] == nums[j]){
+                for(int j = i + 1; j < nums.Length; j++){
                     
-                    return nums[i];
+                    if (nums[i] == nums[j]){
+                        
+                        return nums[i];
+                    }
                 }
+                
             }
-            
+            return -1;
         }
-        return -1;
-    }
-
-
-    
-    static void Main(String[] args) {
-        // setup - don't modify me :)
-        string input = Console.ReadLine();
-        int[] inputArray = new int[input.Length];
-        Console.Write("Input: ");
-        for (int i = 0; i < input.Length; i++)
-        {
-            inputArray[i] = input[i] - '0';
-            Console.Write($"{inputArray[i]} ");
-        }
-        Console.WriteLine();
-        
-        int duplicate = FindDuplicate(inputArray);
-        
-        Console.WriteLine($"Answer: {duplicate}");
-    }
-}     
+    }     
 
 }

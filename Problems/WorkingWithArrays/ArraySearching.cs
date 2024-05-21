@@ -7,12 +7,13 @@ namespace DataStructureV1.Problems
 	{
         public static void TestCode() {
 
-            CheckIfNAndItsDoubleExist()
+            char[] input = { '{', '(', ')', '}', '[', ']' }; 
+            CheckIfNAndItsDoubleExist(input);
 
         }
 
 
-        static void CheckIfNAndItsDoubleExist(int[] arr) {
+        static void CheckIfNAndItsDoubleExist(char[] arr) {
             
                             // Use a HashSet to store the elements for quick lookup
             HashSet<int> set = new HashSet<int>();
@@ -26,7 +27,7 @@ namespace DataStructureV1.Problems
                 if (set.Contains(2 * num))
                 {
                     Console.WriteLine($"Found: {num} * 2 = {2 * num} exists in the set.");
-                    return true; // If found, return true
+                    //return true; // If found, return true
                 }
                 if (num % 2 == 0 && set.Contains(num / 2))
                 {

@@ -113,7 +113,7 @@ namespace DataStructureV1.Problems.WorkingWithArrays
             // If the array is empty, return 0
             if (nums.Length == 0) {
                 Console.WriteLine("Empty array provided.");
-                return 0;
+                //return 0;
             }
 
             // Initialize the index for unique elements
@@ -137,7 +137,7 @@ namespace DataStructureV1.Problems.WorkingWithArrays
             }
 
             // Return the number of unique elements
-            return k;
+            //return k;
             Console.Write("k-"+k);
 
         }

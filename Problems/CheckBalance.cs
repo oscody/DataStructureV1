@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 
 namespace DataStructureV1.Problems
 {
-    public class CheckBalance
+    public static class CheckBalance
     {
 
-    
+    // https://www.geeksforgeeks.org/c-program-to-check-for-balanced-brackets-in-an-expression-well-formedness-using-stack-2/?ref=ml_lbp
     // Oracle Interview Question
     // Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid. An input string is valid if:
 
@@ -45,13 +45,13 @@ namespace DataStructureV1.Problems
     
     
     // */
-        public bool Balance(string input){
+        public static bool Balance(char[] input){
         
             var _stack1 = new Stack<char>();
             var _stack2 = new Stack<char>();
             var _stack3 = new Stack<char>();
             
-            for(int i = 0; i < input.Length(); i++){
+            for(int i = 0; i < input.Length; i++){
                 
                 if(i == '('){
                     
@@ -70,13 +70,16 @@ namespace DataStructureV1.Problems
                 if(i == ')'){
                     
                     _stack1.Pop();
-                } else if ()
+
+                }
                 
             }
             
             /**
                 {
             */
+
+            return true;
             
         }
     }
