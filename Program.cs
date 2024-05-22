@@ -45,10 +45,11 @@ Console.WriteLine(linebreak);
 //TestHexSpeak.Run();
 
 Console.WriteLine(linebreak);
-//TwoSum.Run();
+TwoSum.Run();
 
 //Palindrome.Run();
 
-FindDuplicate.RunCode();
+// FindDuplicate.RunCode();
 
-ValidAnagram.RunCode();
+// ValidAnagram.RunCode();
+

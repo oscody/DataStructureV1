@@ -72,6 +72,34 @@ namespace DataStructureV1.Problems.LeetCode
             Helper.ArrayToString(output);
             return output;
         }
+
+
+        private static int[] TwoSumHashMap(int[] nums, int target)
+        {
+            Dictionary<int, int> dictionary = new Dictionary<int, int>();
+
+            for (int i = 0; i < nums.Length; i++)
+            {
+                // Calculate the complement
+                int complement = target - nums[i];
+
+
+                // Check if the complement is already in the dictionary
+                if (dictionary.ContainsKey(complement))
+                {
+                    return new int[] { dictionary[complement], i };
+                }
+                
+                // Return the indices of the two numbers
+                if (!dictionary.ContainsKey(nums[i]))
+                {
+                    dictionary[nums[i]] = i;
+                }
+            }
+
+            throw new ArgumentException("No two sum solution");
+            
+        }
     }
 }
 
